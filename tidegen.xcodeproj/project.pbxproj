@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8CEA26372F4EB42E008BAD8B /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEA26112F4EB0B2008BAD8B /* ArgumentParser */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		8CEA26012F4EB0B2008BAD8B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEA26372F4EB42E008BAD8B /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +112,10 @@
 			);
 			mainGroup = 8CEA25FA2F4EB0B2008BAD8B;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			packageReferences = (
 				8CEA26102F4EB0B2008BAD8B /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 8CEA26042F4EB0B2008BAD8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

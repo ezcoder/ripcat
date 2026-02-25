@@ -38,6 +38,8 @@ struct TideChartRenderer {
     static func render(
         tideData: TideData,
         config: Configuration = Configuration(),
+        theme: ChartTheme = .light,
+        showCurrentTime: Bool = false,
         outputPath: String
     ) throws {
         guard !tideData.predictions.isEmpty else {
@@ -62,17 +64,23 @@ struct TideChartRenderer {
         func rgb(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat = 1.0) -> CGColor {
             CGColor(colorSpace: colorSpace, components: [r, g, b, a])!
         }
+        func c(_ rgba: ChartTheme.RGBA) -> CGColor {
+            rgb(rgba.r, rgba.g, rgba.b, rgba.a)
+        }
 
-        // Colors
-        let bgColor = rgb(0.98, 0.98, 1.0)
-        let lineColor = rgb(0.1, 0.35, 0.7)
-        let fillColor = rgb(0.1, 0.35, 0.7, 0.12)
-        let gridColor = rgb(0.82, 0.82, 0.85)
-        let axisColor = rgb(0.3, 0.3, 0.3)
-        let highColor = rgb(0.85, 0.15, 0.15)
-        let lowColor = rgb(0.1, 0.55, 0.2)
-        let textColor = rgb(0.25, 0.25, 0.25)
-        let whiteColor = rgb(1, 1, 1)
+        // Colors from theme
+        let bgColor = c(theme.background)
+        let lineColor = c(theme.curve)
+        let fillColor = c(theme.curveFill)
+        let gridColor = c(theme.grid)
+        let axisColor = c(theme.axis)
+        let highColor = c(theme.high)
+        let lowColor = c(theme.low)
+        let textColor = c(theme.text)
+        let titleColor = c(theme.title)
+        let markerBorderColor = c(theme.markerBorder)
+        let currentDotColor = c(theme.currentDot)
+        let currentGlowColor = c(theme.currentGlow)
         guard let ctx = CGContext(
             data: nil,
             width: width,
@@ -215,7 +223,7 @@ struct TideChartRenderer {
             ))
 
             // White border
-            ctx.setStrokeColor(whiteColor)
+            ctx.setStrokeColor(markerBorderColor)
             ctx.setLineWidth(1.5)
             ctx.strokeEllipse(in: CGRect(
                 x: px - markerRadius, y: py - markerRadius,
@@ -241,13 +249,60 @@ struct TideChartRenderer {
         let title = "Tide Predictions: \(tideData.stationName) — \(tideData.date)"
         drawText(title, in: ctx,
                  at: CGPoint(x: CGFloat(width) / 2, y: CGFloat(height) - 30),
-                 fontSize: 16, color: axisColor, alignment: .center, bold: true)
+                 fontSize: 16, color: titleColor, alignment: .center, bold: true)
 
         // Y-axis label
         let yLabel = "Height (ft, MLLW)"
         drawText(yLabel, in: ctx,
                  at: CGPoint(x: 14, y: marginBottom + plotH / 2),
                  fontSize: 10, color: textColor, alignment: .center, rotated: true)
+
+        // Draw current time marker
+        if showCurrentTime {
+            let now = Date()
+            let nowMinutes = minutesInDay(now)
+            // Find the closest prediction to the current time
+            if let closest = tideData.predictions.min(by: {
+                abs(minutesInDay($0.time) - nowMinutes) < abs(minutesInDay($1.time) - nowMinutes)
+            }) {
+                let cx = mapX(nowMinutes)
+                let cy = mapY(closest.height)
+                let dotRadius: CGFloat = 8
+
+                // Outer glow
+                ctx.setFillColor(currentGlowColor)
+                ctx.fillEllipse(in: CGRect(
+                    x: cx - dotRadius * 2, y: cy - dotRadius * 2,
+                    width: dotRadius * 4, height: dotRadius * 4
+                ))
+
+                // Current dot
+                ctx.setFillColor(currentDotColor)
+                ctx.fillEllipse(in: CGRect(
+                    x: cx - dotRadius, y: cy - dotRadius,
+                    width: dotRadius * 2, height: dotRadius * 2
+                ))
+
+                // Border
+                ctx.setStrokeColor(markerBorderColor)
+                ctx.setLineWidth(2.0)
+                ctx.strokeEllipse(in: CGRect(
+                    x: cx - dotRadius, y: cy - dotRadius,
+                    width: dotRadius * 2, height: dotRadius * 2
+                ))
+
+                // Label
+                let nowFormatter = DateFormatter()
+                nowFormatter.dateFormat = "h:mm a"
+                let nowLabel = "Now: \(String(format: "%.1f", closest.height)) ft"
+                drawText(nowLabel, in: ctx,
+                         at: CGPoint(x: cx, y: cy + 16),
+                         fontSize: 11, color: currentDotColor, alignment: .center, bold: true)
+                drawText(nowFormatter.string(from: now), in: ctx,
+                         at: CGPoint(x: cx, y: cy + 30),
+                         fontSize: 9, color: textColor, alignment: .center)
+            }
+        }
 
         // Export PNG
         guard let image = ctx.makeImage() else {

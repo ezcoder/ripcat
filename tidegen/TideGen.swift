@@ -40,9 +40,28 @@ struct TideGen: AsyncParsableCommand {
     @Option(name: .long, help: "Chart image height in pixels (default: 600)")
     var chartHeight: Int = 600
 
+    @Flag(name: .long, help: "Show a red dot on the chart at the current tide level.")
+    var current: Bool = false
+
+    @Option(name: .long, help: "Chart color theme: light, dark, coastal, nautical (default: light)")
+    var theme: ThemeChoice = .light
+
     enum OutputFormat: String, ExpressibleByArgument, CaseIterable {
         case json
         case text
+    }
+
+    enum ThemeChoice: String, ExpressibleByArgument, CaseIterable {
+        case light, dark, coastal, nautical
+
+        var chartTheme: ChartTheme {
+            switch self {
+            case .light: return .light
+            case .dark: return .dark
+            case .coastal: return .coastal
+            case .nautical: return .nautical
+            }
+        }
     }
 
     func validate() throws {
@@ -149,6 +168,8 @@ struct TideGen: AsyncParsableCommand {
             try TideChartRenderer.render(
                 tideData: tideData,
                 config: .init(width: chartWidth, height: chartHeight),
+                theme: theme.chartTheme,
+                showCurrentTime: current,
                 outputPath: chartPath
             )
             fputs("Chart saved to \(chartPath)\n", stderr)
