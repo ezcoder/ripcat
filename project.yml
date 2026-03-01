@@ -44,6 +44,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.ripcat.watchos
         PRODUCT_NAME: RipCat Watch
         GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.ripcat.ios
+        INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: YES
     dependencies:
       - package: RipCatPackage
         product: RipCatCore

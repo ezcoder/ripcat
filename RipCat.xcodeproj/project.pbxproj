@@ -299,6 +299,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ripcat.ios;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.watchos;
 				PRODUCT_NAME = "RipCat Watch";
 				SDKROOT = watchos;
@@ -387,6 +389,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ripcat.ios;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.watchos;
 				PRODUCT_NAME = "RipCat Watch";
 				SDKROOT = watchos;
