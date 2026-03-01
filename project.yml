@@ -1,0 +1,79 @@
+name: RipCat
+options:
+  minimumXcodeGenVersion: 2.44.0
+  deploymentTarget:
+    iOS: '17.0'
+    macOS: '14.0'
+    watchOS: '10.0'
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    CODE_SIGNING_ALLOWED: NO
+    CODE_SIGNING_REQUIRED: NO
+packages:
+  RipCatPackage:
+    path: .
+targets:
+  RipCat:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources/RipCatApp
+    resources:
+      - path: RipCat/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ripcat.ios
+        PRODUCT_NAME: RipCat
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    dependencies:
+      - package: RipCatPackage
+        product: RipCatCore
+
+  RipCatWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - path: Sources/RipCatWatch
+    resources:
+      - path: "RipCat Watch App/Assets.xcassets"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ripcat.watchos
+        PRODUCT_NAME: RipCat Watch
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - package: RipCatPackage
+        product: RipCatCore
+
+  RipCatMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/RipCatMac
+    resources:
+      - path: "RipCat Mac/Assets.xcassets"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ripcat.macos
+        PRODUCT_NAME: RipCat Mac
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - package: RipCatPackage
+        product: RipCatCore
+
+schemes:
+  RipCat:
+    build:
+      targets:
+        RipCat: all
+  RipCatWatch:
+    build:
+      targets:
+        RipCatWatch: all
+  RipCatMac:
+    build:
+      targets:
+        RipCatMac: all

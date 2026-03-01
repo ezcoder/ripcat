@@ -1,4 +1,5 @@
 import SwiftUI
+import RipCatCore
 
 struct TideChartView: View {
     @Environment(TideViewModel.self) private var viewModel

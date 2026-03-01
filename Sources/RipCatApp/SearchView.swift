@@ -1,4 +1,5 @@
 import SwiftUI
+import RipCatCore
 
 struct SearchView: View {
     @Environment(TideViewModel.self) private var viewModel

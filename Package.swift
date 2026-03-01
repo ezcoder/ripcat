@@ -5,7 +5,10 @@ import PackageDescription
 let package = Package(
     name: "RipCat",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v13),
+        .iOS(.v17),
+        .watchOS(.v10),
+        .visionOS(.v1)
     ],
     products: [
         .library(name: "RipCatCore", targets: ["RipCatCore"]),

@@ -1,5 +1,6 @@
 import CoreLocation
 import SwiftUI
+import RipCatCore
 
 struct TodayView: View {
     @Environment(TideViewModel.self) private var viewModel

@@ -83,12 +83,13 @@ final class TideViewModel {
 
             let today = Self.apiDateFormatter.string(from: Date())
             let displayDate = Self.displayDateFormatter.string(from: Date())
+            let stationID = result.station.id
 
             async let predictionsResult = NOAAClient.fetchPredictions(
-                stationID: result.station.id, date: today
+                stationID: stationID, date: today
             )
             async let hiloResult = NOAAClient.fetchHiLo(
-                stationID: result.station.id, date: today
+                stationID: stationID, date: today
             )
 
             let predictions = try await predictionsResult

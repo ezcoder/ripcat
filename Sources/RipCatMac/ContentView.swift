@@ -1,4 +1,5 @@
 import SwiftUI
+import RipCatCore
 
 struct ContentView: View {
     @Environment(TideViewModel.self) private var viewModel

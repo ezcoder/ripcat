@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015BD4FCF15B42C237F32B9F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B78326676C9852647F8218 /* SettingsView.swift */; };
+		07AAE1EA39E5D7702772BECA /* TideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E06593226A5CD8C909C355 /* TideViewModel.swift */; };
+		07D0686D477C6D342FE5AC0A /* MenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C795F1B8BCEFC7CF3710100 /* MenuBarExtra.swift */; };
+		10C0DEFF29CD999C0E3ACF4D /* RipCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A878B51BE247590DD9FA60E /* RipCatApp.swift */; };
+		217BB259A0E1AC10C2472F9B /* RipCatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5B25AF45F33C861214D8CB80 /* RipCatCore */; };
+		27DAB8F6690F07611B8B5A4B /* TideGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAA1A4FA602FF94D399B3E /* TideGlanceView.swift */; };
+		2C8316B23A4B2CF7654B607A /* TodayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1379318745C6297A2D4C456 /* TodayDetailView.swift */; };
+		391C689C45DFE02A2C0A4113 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FCE2D608FE8CDE44E4AC1 /* TodayView.swift */; };
+		43968FD79C0153F18E966E6B /* TideChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7409F735C3E4C37546CEE34 /* TideChartView.swift */; };
+		46EE2F4FE590A99FA9B359D9 /* RipCatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 09746201F4B7BA94993FCC22 /* RipCatCore */; };
+		47B697CBF44C7832641AFA55 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D720FADA1488C10C9198A /* SearchView.swift */; };
+		4EB82F0F24484D93AA908D8E /* RipCatMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70D040CC0AC95445019034 /* RipCatMacApp.swift */; };
+		55301052CD57C009C0E1A99E /* TideChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7AEFD39353133CB02E176 /* TideChartView.swift */; };
+		5BED34D80A843414F22F82E4 /* RipCatWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3211C0486F6A8CA23370E1 /* RipCatWatchApp.swift */; };
+		87201F40A8FB1C8AE9C78038 /* TideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB839344B0D51F012929C6A /* TideViewModel.swift */; };
+		8B7A1985BCA8EC22EDE68248 /* RipCatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7CBA8C6E158444165B68AFC1 /* RipCatCore */; };
+		B04C6CABA6F682B49C26254F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54F3D2EA3BB4A458B7A7EA /* ContentView.swift */; };
+		B5DEB3006F9A12C08494210D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75E5E9EA8100A8B36B8771 /* ContentView.swift */; };
+		D4559A0EC760ACE9AEEE9D70 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16948B995ACF32DD56F785D1 /* SearchView.swift */; };
+		D47D9E1015C256096FFF3B32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A4D86AA7BECC05E16C71DF /* SettingsView.swift */; };
+		DFD6810C3C6A811BAE61C290 /* TideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38665F4588048162E14FD9BF /* TideViewModel.swift */; };
+		DFDCB7D90901EFA8B78DE9D7 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC4B922B696BDB8A8478D9 /* TodayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03A4D86AA7BECC05E16C71DF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		04F7AEFD39353133CB02E176 /* TideChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideChartView.swift; sourceTree = "<group>"; };
+		11E06593226A5CD8C909C355 /* TideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideViewModel.swift; sourceTree = "<group>"; };
+		16948B995ACF32DD56F785D1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		315D720FADA1488C10C9198A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		38665F4588048162E14FD9BF /* TideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideViewModel.swift; sourceTree = "<group>"; };
+		3A5FCE2D608FE8CDE44E4AC1 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		3A878B51BE247590DD9FA60E /* RipCatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipCatApp.swift; sourceTree = "<group>"; };
+		3C795F1B8BCEFC7CF3710100 /* MenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtra.swift; sourceTree = "<group>"; };
+		43EC4B922B696BDB8A8478D9 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		4A54F3D2EA3BB4A458B7A7EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D75E5E9EA8100A8B36B8771 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FAAA1A4FA602FF94D399B3E /* TideGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideGlanceView.swift; sourceTree = "<group>"; };
+		7FC6C8E83A3F2666372FB4E3 /* RipCatWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RipCatWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8758D03116481D339D5803FD /* RipCat.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RipCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAD7B368A408C23BD0A534A /* RipCatMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RipCatMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7409F735C3E4C37546CEE34 /* TideChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideChartView.swift; sourceTree = "<group>"; };
+		AB3211C0486F6A8CA23370E1 /* RipCatWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipCatWatchApp.swift; sourceTree = "<group>"; };
+		B1379318745C6297A2D4C456 /* TodayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetailView.swift; sourceTree = "<group>"; };
+		CF70D040CC0AC95445019034 /* RipCatMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipCatMacApp.swift; sourceTree = "<group>"; };
+		CFB839344B0D51F012929C6A /* TideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideViewModel.swift; sourceTree = "<group>"; };
+		D66BC89A01651C59C93EACD6 /* ripcat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ripcat; path = .; sourceTree = SOURCE_ROOT; };
+		D9B78326676C9852647F8218 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1DEBB03FB706D3ACA1C312E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EE2F4FE590A99FA9B359D9 /* RipCatCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F6ABBA3B4201941D85B2B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7A1985BCA8EC22EDE68248 /* RipCatCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CF2F68C10C67E0D2C06581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				217BB259A0E1AC10C2472F9B /* RipCatCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CA590A707199E93D856EB5E /* RipCatWatch */ = {
+			isa = PBXGroup;
+			children = (
+				AB3211C0486F6A8CA23370E1 /* RipCatWatchApp.swift */,
+				6FAAA1A4FA602FF94D399B3E /* TideGlanceView.swift */,
+				CFB839344B0D51F012929C6A /* TideViewModel.swift */,
+				43EC4B922B696BDB8A8478D9 /* TodayView.swift */,
+			);
+			name = RipCatWatch;
+			path = Sources/RipCatWatch;
+			sourceTree = "<group>";
+		};
+		4750670699E9A9EA9204D3A2 = {
+			isa = PBXGroup;
+			children = (
+				7B000D7B91317BB8E8E34F2D /* Packages */,
+				7224C1881108B73B0240C570 /* RipCatApp */,
+				C2747671ECA7FF3FD03F6A87 /* RipCatMac */,
+				1CA590A707199E93D856EB5E /* RipCatWatch */,
+				565F7F47BBEA69ECECFFE10F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		565F7F47BBEA69ECECFFE10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8758D03116481D339D5803FD /* RipCat.app */,
+				9AAD7B368A408C23BD0A534A /* RipCatMac.app */,
+				7FC6C8E83A3F2666372FB4E3 /* RipCatWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7224C1881108B73B0240C570 /* RipCatApp */ = {
+			isa = PBXGroup;
+			children = (
+				4A54F3D2EA3BB4A458B7A7EA /* ContentView.swift */,
+				3A878B51BE247590DD9FA60E /* RipCatApp.swift */,
+				315D720FADA1488C10C9198A /* SearchView.swift */,
+				03A4D86AA7BECC05E16C71DF /* SettingsView.swift */,
+				04F7AEFD39353133CB02E176 /* TideChartView.swift */,
+				11E06593226A5CD8C909C355 /* TideViewModel.swift */,
+				3A5FCE2D608FE8CDE44E4AC1 /* TodayView.swift */,
+			);
+			name = RipCatApp;
+			path = Sources/RipCatApp;
+			sourceTree = "<group>";
+		};
+		7B000D7B91317BB8E8E34F2D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D66BC89A01651C59C93EACD6 /* ripcat */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C2747671ECA7FF3FD03F6A87 /* RipCatMac */ = {
+			isa = PBXGroup;
+			children = (
+				4D75E5E9EA8100A8B36B8771 /* ContentView.swift */,
+				3C795F1B8BCEFC7CF3710100 /* MenuBarExtra.swift */,
+				CF70D040CC0AC95445019034 /* RipCatMacApp.swift */,
+				16948B995ACF32DD56F785D1 /* SearchView.swift */,
+				D9B78326676C9852647F8218 /* SettingsView.swift */,
+				A7409F735C3E4C37546CEE34 /* TideChartView.swift */,
+				38665F4588048162E14FD9BF /* TideViewModel.swift */,
+				B1379318745C6297A2D4C456 /* TodayDetailView.swift */,
+			);
+			name = RipCatMac;
+			path = Sources/RipCatMac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57DC9D21C067D4223C4AAB71 /* RipCatMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF810E23667D5681CE2DDB0D /* Build configuration list for PBXNativeTarget "RipCatMac" */;
+			buildPhases = (
+				279EC01F49490B049A5C050F /* Sources */,
+				A1DEBB03FB706D3ACA1C312E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RipCatMac;
+			packageProductDependencies = (
+				09746201F4B7BA94993FCC22 /* RipCatCore */,
+			);
+			productName = RipCatMac;
+			productReference = 9AAD7B368A408C23BD0A534A /* RipCatMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7392493057F224ACE537DF9F /* RipCatWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C069ED89819FDA16BAAB37B5 /* Build configuration list for PBXNativeTarget "RipCatWatch" */;
+			buildPhases = (
+				DA0DDA65C4CBFC3FAAFD12AA /* Sources */,
+				F4CF2F68C10C67E0D2C06581 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RipCatWatch;
+			packageProductDependencies = (
+				5B25AF45F33C861214D8CB80 /* RipCatCore */,
+			);
+			productName = RipCatWatch;
+			productReference = 7FC6C8E83A3F2666372FB4E3 /* RipCatWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4673A19175A7A724864C97D /* RipCat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8329606A2E744B78AC096C35 /* Build configuration list for PBXNativeTarget "RipCat" */;
+			buildPhases = (
+				8BF3DBBCB38837222BE71081 /* Sources */,
+				E0F6ABBA3B4201941D85B2B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RipCat;
+			packageProductDependencies = (
+				7CBA8C6E158444165B68AFC1 /* RipCatCore */,
+			);
+			productName = RipCat;
+			productReference = 8758D03116481D339D5803FD /* RipCat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40D83D21762E9DC56DBB589B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = EA300B12BC5415D81EFF4B52 /* Build configuration list for PBXProject "RipCat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4750670699E9A9EA9204D3A2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A55DDC7C8EABE42B8ED5CBEA /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4673A19175A7A724864C97D /* RipCat */,
+				57DC9D21C067D4223C4AAB71 /* RipCatMac */,
+				7392493057F224ACE537DF9F /* RipCatWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		279EC01F49490B049A5C050F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5DEB3006F9A12C08494210D /* ContentView.swift in Sources */,
+				07D0686D477C6D342FE5AC0A /* MenuBarExtra.swift in Sources */,
+				4EB82F0F24484D93AA908D8E /* RipCatMacApp.swift in Sources */,
+				D4559A0EC760ACE9AEEE9D70 /* SearchView.swift in Sources */,
+				015BD4FCF15B42C237F32B9F /* SettingsView.swift in Sources */,
+				43968FD79C0153F18E966E6B /* TideChartView.swift in Sources */,
+				DFD6810C3C6A811BAE61C290 /* TideViewModel.swift in Sources */,
+				2C8316B23A4B2CF7654B607A /* TodayDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BF3DBBCB38837222BE71081 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04C6CABA6F682B49C26254F /* ContentView.swift in Sources */,
+				10C0DEFF29CD999C0E3ACF4D /* RipCatApp.swift in Sources */,
+				47B697CBF44C7832641AFA55 /* SearchView.swift in Sources */,
+				D47D9E1015C256096FFF3B32 /* SettingsView.swift in Sources */,
+				55301052CD57C009C0E1A99E /* TideChartView.swift in Sources */,
+				07AAE1EA39E5D7702772BECA /* TideViewModel.swift in Sources */,
+				391C689C45DFE02A2C0A4113 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0DDA65C4CBFC3FAAFD12AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BED34D80A843414F22F82E4 /* RipCatWatchApp.swift in Sources */,
+				27DAB8F6690F07611B8B5A4B /* TideGlanceView.swift in Sources */,
+				87201F40A8FB1C8AE9C78038 /* TideViewModel.swift in Sources */,
+				DFDCB7D90901EFA8B78DE9D7 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03D0C27965F68C572634A15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.watchos;
+				PRODUCT_NAME = "RipCat Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		06DFDDE2C6988167CADC7E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		3D32ADF9DE6D0F258C66CCFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.macos;
+				PRODUCT_NAME = "RipCat Mac";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2CBA102B72146C86CE9BC8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.watchos;
+				PRODUCT_NAME = "RipCat Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		BB534486BD3B651CF933B831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		DAC7312DC9E08C54C745604E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.macos;
+				PRODUCT_NAME = "RipCat Mac";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE285A2BD5D6D5396A4921C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.ios;
+				PRODUCT_NAME = RipCat;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FACD33DACDC3E330C3B4184C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripcat.ios;
+				PRODUCT_NAME = RipCat;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8329606A2E744B78AC096C35 /* Build configuration list for PBXNativeTarget "RipCat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD33DACDC3E330C3B4184C /* Debug */,
+				EE285A2BD5D6D5396A4921C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C069ED89819FDA16BAAB37B5 /* Build configuration list for PBXNativeTarget "RipCatWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2CBA102B72146C86CE9BC8B /* Debug */,
+				03D0C27965F68C572634A15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CF810E23667D5681CE2DDB0D /* Build configuration list for PBXNativeTarget "RipCatMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D32ADF9DE6D0F258C66CCFF /* Debug */,
+				DAC7312DC9E08C54C745604E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EA300B12BC5415D81EFF4B52 /* Build configuration list for PBXProject "RipCat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB534486BD3B651CF933B831 /* Debug */,
+				06DFDDE2C6988167CADC7E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A55DDC7C8EABE42B8ED5CBEA /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09746201F4B7BA94993FCC22 /* RipCatCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RipCatCore;
+		};
+		5B25AF45F33C861214D8CB80 /* RipCatCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RipCatCore;
+		};
+		7CBA8C6E158444165B68AFC1 /* RipCatCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RipCatCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 40D83D21762E9DC56DBB589B /* Project object */;
+}

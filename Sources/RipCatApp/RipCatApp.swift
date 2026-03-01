@@ -1,4 +1,5 @@
 import SwiftUI
+import RipCatCore
 
 @main
 struct RipCatApp: App {
