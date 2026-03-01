@@ -5,6 +5,7 @@ import RipCatCore
 struct TodayView: View {
     @Environment(TideViewModel.self) private var viewModel
     @State private var locationManager = LocationManager()
+    @State private var hasLoadedOnce = false
 
     var body: some View {
         NavigationStack {
@@ -38,6 +39,8 @@ struct TodayView: View {
                 }
             }
             .task {
+                guard !hasLoadedOnce else { return }
+                hasLoadedOnce = true
                 await loadNearestStation()
             }
         }
@@ -111,8 +114,8 @@ struct TodayView: View {
             )
         } else {
             locationManager.requestLocation()
-            // Default to San Francisco while waiting for location
-            await viewModel.fetchTides(for: "San Francisco, CA")
+            // Default to SF coordinates while waiting for location (avoids geocoder throttling)
+            await viewModel.fetchTides(latitude: 37.7749, longitude: -122.4194)
         }
     }
 }

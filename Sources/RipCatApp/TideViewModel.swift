@@ -15,6 +15,9 @@ final class TideViewModel {
     var errorMessage: String?
     var selectedThemeName: String = "light"
 
+    private var geocodeCache: [String: (Double, Double)] = [:]
+    private var geocodeInFlight = Set<String>()
+
     var selectedTheme: ChartTheme {
         ChartTheme.named(selectedThemeName) ?? .light
     }
@@ -50,6 +53,21 @@ final class TideViewModel {
     }
 
     func fetchTides(for city: String) async {
+        let query = city.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard !query.isEmpty else { return }
+
+        if let cached = geocodeCache[query] {
+            await fetchTides(latitude: cached.0, longitude: cached.1)
+            return
+        }
+
+        if geocodeInFlight.contains(query) {
+            return
+        }
+
+        geocodeInFlight.insert(query)
+        defer { geocodeInFlight.remove(query) }
+
         isLoading = true
         errorMessage = nil
         tideData = nil
@@ -57,9 +75,15 @@ final class TideViewModel {
 
         do {
             let (lat, lon) = try await GeocoderService.geocode(city: city)
+            geocodeCache[query] = (lat, lon)
             await fetchTides(latitude: lat, longitude: lon)
         } catch {
-            errorMessage = "Geocoding failed: \(error.localizedDescription)"
+            let msg = error.localizedDescription.lowercased()
+            if msg.contains("more than 50 requests") || msg.contains("throttled") {
+                errorMessage = "Geocoder is rate-limited. Wait ~60 seconds, then try again."
+            } else {
+                errorMessage = "Geocoding failed: \(error.localizedDescription)"
+            }
             isLoading = false
         }
     }
