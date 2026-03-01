@@ -40,13 +40,13 @@ public struct TideChartRenderer {
         }
     }
 
-    public static func render(
+    /// Render tide data to a CGImage without writing to disk.
+    public static func renderToImage(
         tideData: TideData,
         config: Configuration = Configuration(),
         theme: ChartTheme = .light,
-        showCurrentTime: Bool = false,
-        outputPath: String
-    ) throws {
+        showCurrentTime: Bool = false
+    ) throws -> CGImage {
         guard !tideData.predictions.isEmpty else {
             throw ChartError.noData
         }
@@ -309,10 +309,26 @@ public struct TideChartRenderer {
             }
         }
 
-        // Export PNG
         guard let image = ctx.makeImage() else {
             throw ChartError.imageCreationFailed
         }
+        return image
+    }
+
+    /// Render tide data and write to a PNG file at the given path.
+    public static func render(
+        tideData: TideData,
+        config: Configuration = Configuration(),
+        theme: ChartTheme = .light,
+        showCurrentTime: Bool = false,
+        outputPath: String
+    ) throws {
+        let image = try renderToImage(
+            tideData: tideData,
+            config: config,
+            theme: theme,
+            showCurrentTime: showCurrentTime
+        )
         let url = URL(fileURLWithPath: outputPath) as CFURL
         guard let destination = CGImageDestinationCreateWithURL(
             url, UTType.png.identifier as CFString, 1, nil
