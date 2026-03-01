@@ -45,7 +45,7 @@ His board is shaped by **Randy Cone**, Mavericks legend and Ben's shaper for 34 
 </td>
 <td align="center" width="50%">
 <img src="branding/hero-jalama.jpg" alt="Rip at Jalama" width="100%"><br>
-<strong>Jalama</strong> — Raw Pacific power
+<strong>Central Coast California</strong> — Raw Pacific power
 </td>
 </tr>
 </table>
