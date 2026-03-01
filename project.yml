@@ -8,8 +8,6 @@ options:
 settings:
   base:
     SWIFT_VERSION: 6.0
-    CODE_SIGNING_ALLOWED: NO
-    CODE_SIGNING_REQUIRED: NO
 packages:
   RipCatPackage:
     path: .
