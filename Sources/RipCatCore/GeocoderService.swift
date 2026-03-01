@@ -8,12 +8,12 @@
 import CoreLocation
 import Foundation
 
-struct GeocoderService {
-    enum GeocoderError: LocalizedError {
+public struct GeocoderService {
+    public enum GeocoderError: LocalizedError {
         case noResults(String)
         case geocodingFailed(Error)
 
-        var errorDescription: String? {
+        public var errorDescription: String? {
             switch self {
             case .noResults(let city):
                 return "Could not find coordinates for '\(city)'"
@@ -23,7 +23,7 @@ struct GeocoderService {
         }
     }
 
-    static func geocode(city: String) async throws -> (latitude: Double, longitude: Double) {
+    public static func geocode(city: String) async throws -> (latitude: Double, longitude: Double) {
         let geocoder = CLGeocoder()
         do {
             let placemarks = try await geocoder.geocodeAddressString(city)

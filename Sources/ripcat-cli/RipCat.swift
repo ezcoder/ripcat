@@ -1,17 +1,16 @@
 //
-//  TideGen.swift
-//  tidegen
-//
-//  Created by Ben on 2/24/26.
+//  RipCat.swift
+//  ripcat-cli
 //
 
 import ArgumentParser
 import Foundation
+import RipCatCore
 
 @main
-struct TideGen: AsyncParsableCommand {
+struct RipCat: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
-        commandName: "tidegen",
+        commandName: "ripcat",
         abstract: "Generate tide predictions and charts for US coastal locations.",
         version: "1.0.0"
     )
@@ -29,7 +28,7 @@ struct TideGen: AsyncParsableCommand {
     var date: String?
 
     @Option(name: .long, help: "Output format: json or text (default: json)")
-    var format: OutputFormat = .json
+    var format: FormatOption = .json
 
     @Option(name: .long, help: "File path for tide chart PNG image. If omitted, no chart is generated.")
     var chart: String?
@@ -46,9 +45,16 @@ struct TideGen: AsyncParsableCommand {
     @Option(name: .long, help: "Chart color theme: light, dark, coastal, nautical (default: light)")
     var theme: ThemeChoice = .light
 
-    enum OutputFormat: String, ExpressibleByArgument, CaseIterable {
+    enum FormatOption: String, ExpressibleByArgument, CaseIterable {
         case json
         case text
+
+        var outputFormat: OutputFormat {
+            switch self {
+            case .json: return .json
+            case .text: return .text
+            }
+        }
     }
 
     enum ThemeChoice: String, ExpressibleByArgument, CaseIterable {
@@ -159,7 +165,7 @@ struct TideGen: AsyncParsableCommand {
         )
 
         // 6. Output formatted data
-        let output = try OutputFormatter.format(tideData: tideData, as: format)
+        let output = try OutputFormatter.format(tideData: tideData, as: format.outputFormat)
         print(output)
 
         // 7. Optionally render chart

@@ -1,14 +1,12 @@
 //
 //  OutputFormatter.swift
-//  tidegen
-//
-//  Created by Ben on 2/24/26.
+//  RipCatCore
 //
 
 import Foundation
 
-struct OutputFormatter {
-    static func format(tideData: TideData, as outputFormat: TideGen.OutputFormat) throws -> String {
+public struct OutputFormatter {
+    public static func format(tideData: TideData, as outputFormat: OutputFormat) throws -> String {
         switch outputFormat {
         case .json:
             return try formatJSON(tideData)

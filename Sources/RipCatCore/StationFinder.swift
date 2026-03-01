@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct StationFinder {
-    static func findNearest(
+public struct StationFinder {
+    public static func findNearest(
         latitude: Double,
         longitude: Double,
         stations: [NOAAStation]
@@ -31,7 +31,7 @@ struct StationFinder {
         return (station, bestDistance)
     }
 
-    static func haversineDistance(
+    public static func haversineDistance(
         lat1: Double, lon1: Double,
         lat2: Double, lon2: Double
     ) -> Double {

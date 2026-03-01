@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum NOAAClientError: LocalizedError {
+public enum NOAAClientError: LocalizedError {
     case invalidURL(String)
     case networkError(Error)
     case decodingError(Error)
     case noData
     case apiError(String)
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidURL(let url): return "Invalid URL: \(url)"
         case .networkError(let err): return "Network error: \(err.localizedDescription)"
@@ -25,12 +25,12 @@ enum NOAAClientError: LocalizedError {
     }
 }
 
-struct NOAAClient {
+public struct NOAAClient {
     private static let baseURL = "https://api.tidesandcurrents.noaa.gov"
     private static let dataGetterPath = "/api/prod/datagetter"
     private static let stationsPath = "/mdapi/prod/webapi/stations.json"
 
-    static func fetchStations() async throws -> [NOAAStation] {
+    public static func fetchStations() async throws -> [NOAAStation] {
         let urlString = "\(baseURL)\(stationsPath)?type=tidepredictions"
         let data = try await fetch(urlString: urlString)
         do {
@@ -41,7 +41,7 @@ struct NOAAClient {
         }
     }
 
-    static func fetchPredictions(stationID: String, date: String) async throws -> [NOAAPrediction] {
+    public static func fetchPredictions(stationID: String, date: String) async throws -> [NOAAPrediction] {
         let urlString = "\(baseURL)\(dataGetterPath)"
             + "?product=predictions"
             + "&station=\(stationID)"
@@ -68,7 +68,7 @@ struct NOAAClient {
         }
     }
 
-    static func fetchHiLo(stationID: String, date: String) async throws -> [NOAAHiLoPrediction] {
+    public static func fetchHiLo(stationID: String, date: String) async throws -> [NOAAHiLoPrediction] {
         let urlString = "\(baseURL)\(dataGetterPath)"
             + "?product=predictions"
             + "&station=\(stationID)"

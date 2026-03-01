@@ -11,14 +11,14 @@ import Foundation
 import ImageIO
 import UniformTypeIdentifiers
 
-enum ChartError: LocalizedError {
+public enum ChartError: LocalizedError {
     case contextCreationFailed
     case imageCreationFailed
     case fileCreationFailed(String)
     case writeFailed(String)
     case noData
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .contextCreationFailed: return "Failed to create graphics context"
         case .imageCreationFailed: return "Failed to create image from context"
@@ -29,13 +29,18 @@ enum ChartError: LocalizedError {
     }
 }
 
-struct TideChartRenderer {
-    struct Configuration {
-        var width: Int = 1200
-        var height: Int = 600
+public struct TideChartRenderer {
+    public struct Configuration {
+        public var width: Int = 1200
+        public var height: Int = 600
+
+        public init(width: Int = 1200, height: Int = 600) {
+            self.width = width
+            self.height = height
+        }
     }
 
-    static func render(
+    public static func render(
         tideData: TideData,
         config: Configuration = Configuration(),
         theme: ChartTheme = .light,
