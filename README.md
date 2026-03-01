@@ -31,7 +31,7 @@ RipCat is a tide prediction tool powered by NOAA data. It finds your nearest tid
 
 **Rip** is a grey tabby with a touch of brown who's seen bigger waves and is not impressed. He checks the tides from his favorite spots along the Santa Barbara coast — and he always knows when the next set is coming.
 
-His board is shaped by **Randy Cone**, Mavericks legend and Ben's shaper for 34 years. His hoodie is from the **Santa Barbara Surf Shop** — surfboards by Yater since 1962.
+His board is shaped by **Randy Cone**, Mavericks legend and Ben's shaper for 40 years. His hoodie is from the **Santa Barbara Surf Shop** — surfboards by Yater since 1962.
 
 ---
 
@@ -120,7 +120,7 @@ Rip's official hoodie supplier.
 </td>
 <td align="center" width="50%">
 <strong>Randy Cone Surfboards</strong><br>
-<em>Mavericks legend. 40 years shaping. 34 years of shapes with Ben.</em><br>
+<em>Mavericks legend. 40 years shaping. 40 years of shapes with Ben.</em><br>
 Rip's board of choice.
 </td>
 </tr>
