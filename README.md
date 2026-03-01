@@ -120,7 +120,7 @@ Rip's official hoodie supplier.
 </td>
 <td align="center" width="50%">
 <strong>Randy Cone Surfboards</strong><br>
-<em>Mavericks legend. 34 years of shapes.</em><br>
+<em>Mavericks legend. 40 years shaping. 34 years of shapes with Ben.</em><br>
 Rip's board of choice.
 </td>
 </tr>
